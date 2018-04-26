@@ -29,6 +29,5 @@ public class JsonFood {
         }
 
         return foodList;
-
     }
 }
