@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
         loadData();
     }
-
+    //Metodo onclick
     public void onClickgoToGame(View view) {
         Intent intent = new Intent(MainActivity.this, GameActivity.class);
         startActivity(intent);

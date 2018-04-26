@@ -26,9 +26,7 @@ import java.util.List;
 
 public class GameActivity extends AppCompatActivity {
 
-    // Atributos de clase iniciales
     FloatingActionButton fab;
-    //TextView textView;
     RecyclerView recyclerView;
 
     List<Game> gameList = new ArrayList<>();
@@ -44,14 +42,13 @@ public class GameActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.id_rcv_game);
         fab = (FloatingActionButton) findViewById(R.id.fabGoToMainActivity);
 
-        // Establcer la orientacion de RecyclerView
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
 
         loadData();
     }
-
+    //Metodo onclick
     public void onClickgoToMain(View view) {
         Intent intent = new Intent(GameActivity.this, MainActivity.class);
         startActivity(intent);
