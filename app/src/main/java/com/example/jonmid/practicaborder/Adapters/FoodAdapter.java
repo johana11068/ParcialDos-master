@@ -16,46 +16,49 @@ import java.util.List;
 
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
-        List<Food> foodList = new ArrayList<>();
-        Context context;
+    List<Food> foodList;
+    Context context;
 
-        public FoodAdapter(List<Food> foodList, Context context) {
-            this.foodList = foodList;
-            this.context = context;
-        }
-        // ******************************************************************************
-        @NonNull
-        @Override
-        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            // Obtener la vista (item.xml)
-            View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, parent, false);
+    public FoodAdapter(List<Food> foodList, Context context) {
+        this.foodList = foodList;
+        this.context = context;
+    }
 
-            // Pasar la vista (item.xml) al ViewHolder
-            ViewHolder viewHolder = new ViewHolder(item);
+    // ******************************************************************************
 
-            return viewHolder;
-        }
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Obtener la vista (item.xml)
+        View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_food, parent, false);
 
-        @Override
-        public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-            // Asignar los valores a la vista
-            holder.textViewTitle.setText(foodList.get(position).getTitle());
-        }
+        // Pasar la vista (item.xml) al ViewHolder
+        ViewHolder viewHolder = new ViewHolder(item);
 
-        @Override
-        public int getItemCount() {
-            return foodList.size();
-        }
+        return viewHolder;
+    }
 
-        // ******************************************************************************
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        // Asignar los valores a la vista
+        holder.textViewTitleFood.setText(foodList.get(position).getTitle());
+    }
 
-        public class ViewHolder extends RecyclerView.ViewHolder {
-            TextView textViewTitle;
+    @Override
+    public int getItemCount() {
+        return foodList.size();
+    }
 
-            public ViewHolder(View item) {
-                super(item);
+    // ******************************************************************************
 
-                textViewTitle = (TextView) item.findViewById(R.id.id_txv_food_title);
-            }
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        TextView textViewTitleFood;
+
+
+        public ViewHolder(View item) {
+            super(item);
+
+            textViewTitleFood = (TextView) item.findViewById(R.id.id_txv_food_title);
         }
     }
+}
