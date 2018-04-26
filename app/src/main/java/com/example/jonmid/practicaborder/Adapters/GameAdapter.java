@@ -30,10 +30,9 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Obtener la vista (item.xml)
+
         View item = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_game, parent, false);
 
-        // Pasar la vista (item.xml) al ViewHolder
         ViewHolder viewHolder = new ViewHolder(item);
 
         return viewHolder;
@@ -41,7 +40,7 @@ public class GameAdapter extends RecyclerView.Adapter<GameAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        // Asignar los valores a la vista
+
         holder.textViewNameGame.setText(gameList.get(position).getName());
         holder.textViewCharacterGame.setText(gameList.get(position).getCharacter());
         holder.textViewGameSeriesGame.setText(gameList.get(position).getGameSeries());

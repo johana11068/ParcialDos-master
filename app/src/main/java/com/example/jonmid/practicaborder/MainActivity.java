@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-    FloatingActionButton fab;
+    FloatingActionButton faButton;
     RecyclerView recyclerView;
 
     List<Food> foodList = new ArrayList<>();
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         recyclerView = (RecyclerView) findViewById(R.id.id_rcv_food);
-        fab = (FloatingActionButton) findViewById(R.id.fabGoToGame);
+        faButton = (FloatingActionButton) findViewById(R.id.fabGoToGame);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
