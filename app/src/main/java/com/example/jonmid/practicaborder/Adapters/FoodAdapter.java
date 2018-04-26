@@ -13,6 +13,7 @@ import com.example.jonmid.practicaborder.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
 public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
 
         List<Food> foodList = new ArrayList<>();
@@ -23,7 +24,6 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.ViewHolder> {
             this.context = context;
         }
         // ******************************************************************************
-
         @NonNull
         @Override
         public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
